@@ -10,6 +10,15 @@
 #friends-display-link i {
     color:rgba(0,0,0,0.3);
 }
+@keyframes hideSplashScreen {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
 .friends-screen {
     padding: 0 var(--horizontal-space);
 }
@@ -23,4 +32,17 @@
     display: flex;
     justify-content: space-between;
     color:rgba(0,0,0,0.5)
+}
+#splash-screen {
+    background-color: var(--yellow);
+    position:absolute;
+    height: 100vh;
+    width: 100vw;
+    top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:132px;
+    animation:hideSplashScreen 1s ease-in-out forwards;
+    animation-delay:1s;
 }
